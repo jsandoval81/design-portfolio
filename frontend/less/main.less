@@ -1,0 +1,600 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* CSS START */
+
+/*-----Colors-----*/
+@primary-color: #e52a6f;
+@primary-color-dark: #7D173D;
+@secondary-color: #5f0f4e;
+@alt-color-1:#685582;
+@alt-color-2: #67aeca;
+@primary-text-color: #2f2f2f;
+@background-color: #e3e0e8;
+@white: #ffffff;
+
+/**********************/
+/**** GLOBAL FONT STYLES ***/
+/**********************/
+
+body {
+    font-family:Lato, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: @primary-text-color;
+    max-width:2560px; /*27" iMac */
+    transition:all .2s linear;
+    -o-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    background-color: @background-color;
+
+}
+
+h1,h2,h3,h4,h5 {
+    font-size:3.750em;
+    line-height: 1em;
+    font-weight: 300;
+    word-wrap: break-word;
+    color: @primary-color;
+    text-transform: uppercase;
+    margin-bottom:30px;
+}
+
+h2 {
+    font-size:2em;
+}
+
+h3 {
+    font-size:1.2em;
+    margin-bottom: 5px;
+}
+
+p,a,span {
+    font-size:1em;
+    line-height: 1.2em;
+    margin-bottom:20px;
+    font-weight: 300;
+    outline: none;
+}
+
+/*a {
+color: @secondary-color;
+}
+
+a:hover {
+text-decoration: underline;
+}*/
+/*-------------------------------------------------*/
+/*-----------Header Area---------------------------*/
+
+header.side-menu {
+    position:relative;
+    z-index:980;
+    width:205px;
+    position:fixed;
+    height:100%;
+    top:0;
+    left:0;
+    width:204px;
+    margin-left: 0px;
+}
+
+#logo {
+    background-image: url("http://bridgetsandoval.com/wp-content/uploads/2016/12/Bold-B_Pink.png");
+    background-repeat:no-repeat;
+    background-position: center 40px;
+    background-size: contain;
+    position: relative;
+    z-index: 999;
+    margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.site-logo {
+    width:100%;
+    height:205px;
+}
+
+#menu-links {
+
+}
+
+nav a {
+    font-size:1em;
+    line-height: 50px;
+    text-transform:uppercase;
+    color:@primary-text-color;
+}
+
+nav a:hover {
+    color: @primary-color;
+    text-decoration: none;
+}
+
+a.selected, nav li.selected a {
+    color: @primary-color;
+}
+
+#nav ul li {
+    padding-left: 23%;
+}
+
+.navMoveWrap {
+    padding-left:0 !important;
+}
+
+#nav-background {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 204px;
+    z-index: 970;
+    opacity:0.8;
+    background-color: @white;
+}
+/*--------------END HEADER AREA-----------------*/
+
+/*-------------CONTENT AREA----------------------*/
+
+/*#content li h2 {
+background-color: @background-color;
+width:100%;
+color: @white;
+font-size: 1em;
+padding-bottom: 20px;
+padding-top: 20px;
+position: absolute;
+right: 0;
+text-transform: uppercase;
+top: 117px;
+opacity:0;
+right: -200px;
+text-align: center;
+
+}*/
+
+/*-----Home Page-----*/
+.home_fullscreen {
+    z-index:1;
+}
+
+.home_fullscreen #bg {
+    background-image: url("../images/img-ajax-loader.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#bg {
+    background-color: @background-color;
+    position:fixed;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+}
+/*---------------------*/
+
+/*** CSS3 SlideShow ***/
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.cb-slideshow:after {
+    content: '';
+}
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    top: 7px;
+    left: 248px;
+    width: 100%;
+    text-align: left;
+    opacity: 0;
+    color: @white;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div h3 {
+    font-family: 'GFS Didot', serif;
+    font-size: 15.5em;
+    padding: 0;
+    line-height: 1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: @white;
+}
+.cb-slideshow li:nth-child(1) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/cropped-RMNP.jpg);
+}
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/Bridal_Veil.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/Grand_Teton.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/Black_Lake.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+
+.cb-slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+
+/* Animation for the slideshow images */
+
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/* Animation for the title */
+@keyframes titleAnimation {
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    24% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/*** END CSS3 SLIDESHOW CSS **
+
+
+/*-----Work Page-----*/
+
+#work-entries {
+    position: relative;
+    overflow: hidden;
+    height: 2289px;
+    opacity: 1;
+}
+
+.work-entries, .landingPageContainer, .aboutPageContainer {
+    margin-top:40px;
+    margin-left:243px;
+}
+
+
+.work-entries-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+.work-entries-list li{
+    margin: 0 20px 20px 0;
+}
+
+/*---Portfolio Items---*/
+
+.portfolio{
+    min-height: 100vh;
+    background-color: #eeeeee;
+}
+.portfolio-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-item {
+    width: 460px;
+    height: 302px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.portfolio-item .portfolio-mask {
+    background-color: @primary-color;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.portfolio-item .portfolio-mask, .portfolio-item .portfolio-content {
+    width: 460px;
+    height: 302px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.portfolio-item:hover .portfolio-mask {
+    opacity: 0.9;
+}
+.portfolio-item img {
+    display: block;
+    //position: relative;
+    width: auto;
+    height: 100%;
+    transition: all 0.7s ease-in-out;
+}
+.portfolio-item:hover img {
+    transform: scale(5);
+}
+
+.portfolio-item .portfolio-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-content h2 {
+    position: relative;
+    text-transform: uppercase;
+    color: @white;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.portfolio-content p {
+    font-style: italic;
+    font-size: 16px;
+    position: relative;
+    color: @white;
+    padding: 10px 20px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+.portfolio-content a.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: transparent;
+    border: 1px solid @white;
+    color: @white;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin: 0 50px;
+}
+.portfolio-content a.button:hover {
+    background: @primary-color-dark;
+    border-color: @primary-color-dark;
+}
+
+.portfolio-item:hover h2,
+.portfolio-item:hover p,
+.portfolio-item:hover a.button{
+    transform: scale(1);
+    opacity: 1;
+}
+/*-------END WORK PAGE-------*/
+
+
+/* aboutPage, contactPage */
+
+.about_fullscreen #bg{
+}
+
+.about-copy-box{
+    height: 100%;
+    max-width: 40%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.copy {
+    margin-left: 245px;
+    margin-right: 40px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 200;
+}
+
+.about-copy-box h1, .about-copy-box p {
+    color:#575757;
+}
+
+
+.copyBG {
+    background-color: #EBEBEB;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.about_fullscreen{
+    z-index:1;
+}
+
+.about-slideshow,
+.about-slideshow:after,
+.contact-slideshow,
+.contact-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.about-slideshow:after, .contact-slideshow:after {
+    content: '';
+}
+.about-slideshow li span, .contact-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    //opacity: 0;
+    opacity: 1;
+    z-index: 0;
+    // -webkit-backface-visibility: hidden;
+    // -webkit-animation: imageAnimation 24s linear infinite 0s;
+    // -moz-animation: imageAnimation 24s linear infinite 0s;
+    // -o-animation: imageAnimation 24s linear infinite 0s;
+    // -ms-animation: imageAnimation 24s linear infinite 0s;
+    // animation: imageAnimation 243pxs linear infinite 0s;
+}
+
+.about-slideshow li:nth-child(1) span {
+    background-image: url(./Assets/Pink_Leon_Nicaragua.png);
+}
+
+// .about-slideshow li:nth-child(2) span {
+//     background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/Black_Lake.jpg);
+//     -webkit-animation-delay: 6s;
+//     -moz-animation-delay: 6s;
+//     -o-animation-delay: 6s;
+//     -ms-animation-delay: 6s;
+//     animation-delay: 6s;
+// }
+// .about-slideshow li:nth-child(3) span {
+//     background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/RMNP.jpg);
+//     -webkit-animation-delay: 12s;
+//     -moz-animation-delay: 12s;
+//     -o-animation-delay: 12s;
+//     -ms-animation-delay: 12s;
+//     animation-delay: 12s;
+// }
+// .about-slideshow li:nth-child(4) span {
+//     background-image: url(../images/about_contact_images/about4_l_1920.jpg);
+//     -webkit-animation-delay: 18s;
+//     -moz-animation-delay: 18s;
+//     -o-animation-delay: 18s;
+//     -ms-animation-delay: 18s;
+//     animation-delay: 18s;
+// }
+.about-slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.about-slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+// .about-slideshow li:nth-child(4) div {
+//     -webkit-animation-delay: 18s;
+//     -moz-animation-delay: 18s;
+//     -o-animation-delay: 18s;
+//     -ms-animation-delay: 18s;
+//     animation-delay: 18s;
+// }
+
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    25% { opacity: 1; animation-timing-function: ease-in; }
+    //30% { opacity: 0 }
+    //100% { opacity: 1 }
+}
+
+/*.about-mask{
+    background: linear-gradient(@primary-color, @secondary-color);
+    //background: @primary-color;
+    width: 100vw;
+    height: 100vh;
+    opacity: .75;
+}*/

@@ -1,0 +1,403 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* CSS START */
+
+/**********************/
+/**** GLOBAL FONT STYLES ***/
+/**********************/
+
+body {
+    font-family:Lato, sans-serif;
+    color:#2F2F2F;
+    max-width:2560px; /*27" iMac */
+    font-size:16px;
+    line-height:22px;
+    background-color:#E3E0E8;
+    transition:all .2s linear;
+    -o-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+
+}
+
+h1,h2,h3,h4,h5 {
+    font-size:3.750em;
+    line-height: 1em;
+    margin-bottom:30px;
+    color:#E52A6F;
+    text-transform: uppercase;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+h2 {
+    font-size:2em;
+}
+
+h3 {
+    font-size:1.2em;
+    margin-bottom: 5px;
+}
+
+p,a,span {
+    font-size:1em;
+    line-height: 1.2em;
+    margin-bottom:20px;
+    color:#2F2F2F;
+    font-weight: 300;
+    outline: none;
+}
+/*-------------------------------------------------*/
+/*-----------Header Area---------------------------*/
+
+header.desktop {
+    position:relative;
+    z-index:980;
+    width:205px;
+    position:fixed;
+    height:100%;
+    top:0;
+    left:0;
+    width:204px;
+}
+
+#logo {
+    background-image: url("http://bridgetsandoval.com/wp-content/uploads/2016/12/Bold-B_Pink.png");
+    background-repeat:no-repeat;
+    background-position: center 40px;
+    background-size: contain;
+    position: relative;
+    z-index: 999;
+    margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.desktopLogo {
+    width:100%;
+    height:205px;
+}
+
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+a {
+    color: #B22512;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    font-size:1em;
+    line-height: 50px;
+    text-transform:uppercase;
+    color:#2f2f2f;
+}
+
+nav a:hover {
+    color: #E52A6F;
+    text-decoration: none;
+}
+
+a.selected, nav li.selected a {
+    color: #E52A6f !important;
+}
+
+#linkWrap {
+
+}
+
+#nav ul li {
+    padding-left: 23%;
+}
+
+.navMoveWrap {
+    padding-left:0 !important;
+}
+
+#navBG {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 204px;
+    z-index: 970;
+    opacity:0.8;
+    background-color:#FFFFFF;
+}
+/*--------------END HEADER AREA-----------------*/
+
+/*-------------CONTENT AREA----------------------*/
+
+#content li h2 {
+    background-color: #B22512;
+    width:100%;
+    color: #FFFFFF;
+    font-size: 1em;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 117px;
+    opacity:0;
+    right: -200px;
+    text-align: center;
+
+}
+
+/*-----Home Page-----*/
+.home_fullscreen {
+    z-index:1;
+}
+
+.home_fullscreen #bg {
+    background-image: url("../images/img-ajax-loader.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#bg {
+    background-color: #E3E0E8;
+    position:fixed;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+}
+/*---------------------*/
+
+/*** CSS3 SlideShow ***/
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.cb-slideshow:after {
+    content: '';
+}
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    top: 7px;
+    left: 248px;
+    width: 100%;
+    text-align: left;
+    opacity: 0;
+    color: #fff;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div h3 {
+    font-family: 'GFS Didot', serif;
+    font-size: 15.5em;
+    padding: 0;
+    line-height: 1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: #FFFFFF;
+}
+.cb-slideshow li:nth-child(1) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/cropped-RMNP.jpg);
+}
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/Bridal_Veil.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/Grand_Teton.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(http://bridgetsandoval.com/wp-content/uploads/2016/12/Black_Lake.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+
+.cb-slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+
+/* Animation for the slideshow images */
+
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/* Animation for the title */
+@keyframes titleAnimation {
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    24% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/*** END CSS3 SLIDESHOW CSS **
+
+
+/*-----Work Page-----*/
+
+/*#container {
+    margin: 130px 0 0 15px;
+}*/
+
+.workEntries li img{
+    -webkit-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -moz-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -ms-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -o-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+    -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -ms-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+}
+
+.workEntries li:hover img {
+    border-radius: 125px 125px 125px 0;
+    -webkit-border-radius: 125px 125px 125px 0;
+    -webkit-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -moz-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -ms-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -o-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+    -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -ms-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+}
+
+.workEntries li:active img {
+    border-radius: 0;
+    -webkit-border-radius: 125px 125px 125px 0;
+
+    -webkit-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -moz-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -ms-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -o-transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transition: all 300ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+    -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -ms-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+}
+
+.workEntries, .landingPageContainer, .aboutPageContainer {
+    margin-top:40px;
+    margin-left:243px;
+}
+
+.workPage .workEntries li {
+    margin-right:20px;
+    margin-bottom:20px;
+    overflow: hidden;
+}
+
+/*.workEntries {
+    margin-left: 15px;
+    margin-top:87px;
+}
+
+.workEntries li:hover img {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}*/
+/*---------------------*/
