@@ -27,3 +27,5 @@ package.json.ember-try
 
 # Deployment
 .env.deploy.production
+.env.deploy.test
+.env.deploy.development
