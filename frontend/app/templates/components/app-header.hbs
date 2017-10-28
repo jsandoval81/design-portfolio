@@ -1,12 +1,20 @@
-{{#link-to 'application'}}
-    <div class="app-logo"></div>
-{{/link-to}}
-<div id="menu-links">
-    <nav>
-        <ul>
-            <li>{{#link-to "portfolio"}}Portfolio{{/link-to}}</li>
-            <li>{{#link-to "about"}}About{{/link-to}}</li>
-            <li>{{#link-to "contact"}}Contact{{/link-to}}</li>
-        </ul>
-    </nav>
+<div class="mobile-header-container">
+    <div class="mobile-header">
+        <div class="mobile-header-left">
+            <div class="mobile-menu-icon">Menu</div>
+        </div>
+        <div class="mobile-header-center">
+            {{#link-to 'application'}}
+                <div class="header-logo-mobile"></div>
+            {{/link-to}}
+        </div>
+        <div class="mobile-header-right"></div>
+    </div>
+    {{app-header-nav}}
+</div>
+<div class="desktop-header-container">
+    {{#link-to 'application'}}
+        <div class="header-logo-desktop"></div>
+    {{/link-to}}
+    {{app-header-nav}}
 </div>

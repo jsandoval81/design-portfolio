@@ -44,8 +44,8 @@
 
             div {
                 position: absolute;
-                top: 7px;
-                left: 248px;
+                top: 90px;
+                left: 0;
                 width: 100%;
                 text-align: left;
                 opacity: 0;
@@ -53,14 +53,25 @@
                 animation: titleAnimation 36s linear infinite 0s;
                 z-index: 1000;
 
+                @media (min-width: @mobileBreakpoint) {
+                    top: 10px;
+                    left: 248px;
+                }
+
                 h3 {
                     padding: 0;
                     font-family: 'GFS Didot', serif;
-                    font-size: 15.5em;
+                    font-size: 16vw;
                     line-height: 1em;
                     text-transform: uppercase;
                     opacity: 0.5;
                     color: @white;
+                    text-align: center;
+
+                    @media (min-width: @mobileBreakpoint) {
+                        font-size: 14vw;
+                        text-align: left;
+                    }
                 }
             }
 

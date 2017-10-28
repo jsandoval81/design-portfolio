@@ -1,45 +1,163 @@
 
-header.side-menu {
+header.app-header {
+    @appHeaderBreakpoint: @mobileBreakpoint; // sizes.less
+
     position: fixed;
     top: 0;
     left: 0;
-    width: 204px;
-    height: 100%;
-    margin-left: 0px;
+    width: 100%;
+    height: 75px;
     background-color: fadeout(@white, 30%);
     z-index: 980;
 
-    .app-logo {
-        width: 60%;
-        height: 205px;
-        margin-bottom:20px;
-        margin-left: auto;
-        margin-right: auto;
-        background-image: url(/images/app-logo.png);
-        background-repeat:no-repeat;
-        background-position: center 40px;
-        background-size: contain;
-        z-index: 999;
-    }
+    //=================
+    //= Mobile header =
+    //=================
+    .mobile-header-container {
+        height: 100%;
 
-    nav a {
-        font-size: 1em;
-        line-height: 50px;
-        text-transform: uppercase;
-        color: @fontColor;
-        transition: color .25s ease-out;
+        .mobile-header {
+            display: flex;
+            align-items: center;
+            height: 100%;
 
-        &:hover, &.selected, &.active {
-            color: @primaryColor;
-            text-decoration: none;
+            .mobile-header-left {
+                display: flex;
+                flex: 1;
+                height: 100%;
+                align-items: center;
+            }
+
+            .mobile-header-center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .mobile-header-right {
+                display: flex;
+                flex: 1;
+                align-items: center;
+            }
+        }
+
+        .mobile-menu-icon {
+            display: flex;
+            width: 100px;
+            height: 100%;;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            text-transform: uppercase;
+            color: @midRed;
+            cursor: pointer;
+            transition: all .25s ease-out;
+
+            &:hover {
+                background-color: darken(@white, 8%);
+            }
+        }
+
+        nav {
+            display: none;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                list-style-type: none;
+
+                li {
+                    display: flex;
+                    width: 100%;
+                    height: 50px;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:not(:first-child) {
+                        border-top: 1px solid fadeout(@white, 50%);
+                    }
+                }
+            }
+        }
+
+        nav a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            text-transform: uppercase;
+            background-color: fadeout(@midRed, 10%);
+            color: fadeout(@white, 30%);
+            transition: color .25s ease-out;
+
+            &:hover, &:active, &.selected {
+                background-color: fadeout(@darkBlue, 20%);
+                text-decoration: none;
+            }
+        }
+
+        .header-logo-mobile {
+            width: 50px;
+            height: 50px;
+            background-image: url(/images/app-logo.png);
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size: contain;
         }
     }
 
-    nav ul {
-        list-style-type: none;
+    //==================
+    //= Desktop header =
+    //==================
+    .desktop-header-container {
+        display: none;
 
-        li {
-            padding-left: 23%;
+        .header-logo-desktop {
+            width: 60%;
+            height: 205px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: url(/images/app-logo.png);
+            background-repeat:no-repeat;
+            background-position: center 40px;
+            background-size: contain;
+        }
+
+        nav ul {
+            list-style-type: none;
+
+            li {
+                padding-left: 23%;
+            }
+        }
+
+        nav a {
+            font-size: 1em;
+            line-height: 50px;
+            text-transform: uppercase;
+            color: @fontColor;
+            transition: color .25s ease-out;
+
+            &:hover, &.selected, &.active {
+                color: @primaryColor;
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media (min-width: @appHeaderBreakpoint) {
+        width: 204px;
+        height: 100%;
+
+        .mobile-header-container {
+            display: none;
+        }
+
+        .desktop-header-container {
+            display: block;
         }
     }
 

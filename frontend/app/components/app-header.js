@@ -4,6 +4,23 @@ export default Component.extend({
 
     tagName: 'header',
 
-    classNames: 'side-menu',
+    classNames: 'app-header',
+
+    didInsertElement: function () {
+        var $mobileMenu = Ember.$('.mobile-header-container nav'),
+            animationDuration = 500;
+
+        this._super.apply(arguments);
+
+        Ember.$(document).on('click', function (event) {
+            var $target = $(event.target);
+
+            if ($target.hasClass('mobile-menu-icon')) {
+                $mobileMenu.slideToggle(animationDuration);
+            } else if ($mobileMenu.is(':visible')) {
+                $mobileMenu.slideUp(animationDuration);
+            }
+        });
+    },
 
 });
