@@ -3,24 +3,72 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bridget Sandoval Design&copy;</title>
+    <title>Bridget Sandoval Design &copy;</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-<meta name="site/config/environment" content="%7B%22modulePrefix%22%3A%22site%22%2C%22environment%22%3A%22development%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22site%22%2C%22version%22%3A%220.0.0+e250fa65%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
+<meta name="site/config/environment" content="%7B%22modulePrefix%22%3A%22site%22%2C%22environment%22%3A%22development%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22site%22%2C%22version%22%3A%220.0.0+3c5e2319%22%7D%2C%22ifa%22%3A%7B%22enabled%22%3Atrue%2C%22inline%22%3Afalse%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
 
-    <link integrity="" rel="stylesheet" href="/assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="/assets/site.css">
+    <link integrity="" rel="stylesheet" href="/assets/vendor-976c3da21a1a9518ce88613154834113.css">
+    <link integrity="" rel="stylesheet" href="/assets/site-82f2364ed7fcdaf88af732b960aa35a1.css">
 
     
   </head>
   <body>
     
 
-    <script src="/assets/vendor.js"></script>
-    <script src="/assets/site.js"></script>
+    <script src="/assets/vendor-e0d80519f5ef5e4c86ffd612294a6207.js"></script>
+    <script src="/assets/site-96f55c7c902d7bbf2425d0dfc6d3466a.js"></script>
 
     
+
+    <div class="app-loading">
+        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-foreground" class="vertical-centered-box"></div>
+
+        <div class="vertical-centered-box">
+            <div class="content">
+                <div class="loader-circle"></div>
+                <div class="loader-line-mask">
+                    <div class="loader-line"></div>
+                </div>
+                <img src="/images/app-logo-e995f37da99b1db1b1d4fc144a41e2d3.png" alt="Bridget Sandoval" class="loading-logo" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var loadingUi = {};
+        document.addEventListener('DOMContentLoaded', function(event) {
+            loadingUi.foreground = particleground(document.getElementById('particles-foreground'), {
+                dotColor: 'rgba(255, 255, 255, 1)',
+                lineColor: 'rgba(255, 255, 255, 0.05)',
+                minSpeedX: 0.3,
+                maxSpeedX: 0.6,
+                minSpeedY: 0.3,
+                maxSpeedY: 0.6,
+                density: 50000, // One particle every n pixels
+                curvedLines: false,
+                proximity: 250, // How close two dots need to be before they join
+                parallaxMultiplier: 10, // Lower the number is more extreme parallax
+                particleRadius: 4, // Dot size
+            });
+
+            loadingUi.background = particleground(document.getElementById('particles-background'), {
+                dotColor: 'rgba(255, 255, 255, 0.5)',
+                lineColor: 'rgba(255, 255, 255, 0.05)',
+                minSpeedX: 0.075,
+                maxSpeedX: 0.15,
+                minSpeedY: 0.075,
+                maxSpeedY: 0.15,
+                density: 30000, // One particle every n pixels
+                curvedLines: false,
+                proximity: 20, // How close two dots need to be before they join
+                parallaxMultiplier: 20, // Lower the number is more extreme parallax
+                particleRadius: 2, // Dot size
+            });
+        });
+    </script>
   </body>
 </html>

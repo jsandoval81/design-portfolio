@@ -38,8 +38,9 @@
     </div>
 
     <script>
+        var loadingUi = {};
         document.addEventListener('DOMContentLoaded', function(event) {
-            particleground(document.getElementById('particles-foreground'), {
+            loadingUi.foreground = particleground(document.getElementById('particles-foreground'), {
                 dotColor: 'rgba(255, 255, 255, 1)',
                 lineColor: 'rgba(255, 255, 255, 0.05)',
                 minSpeedX: 0.3,
@@ -53,7 +54,7 @@
                 particleRadius: 4, // Dot size
             });
 
-            particleground(document.getElementById('particles-background'), {
+            loadingUi.background = particleground(document.getElementById('particles-background'), {
                 dotColor: 'rgba(255, 255, 255, 0.5)',
                 lineColor: 'rgba(255, 255, 255, 0.05)',
                 minSpeedX: 0.075,

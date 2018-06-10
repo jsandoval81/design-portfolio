@@ -37,6 +37,9 @@ export default BaseRoute.extend({
 
         return Promise.all(loadImages).then(function () {
             Ember.$('.app-loading').hide();
+            window.loadingUi.foreground.destroy();
+            window.loadingUi.background.destroy();
+            Ember.$('.app-loading').remove();
         });
     },
 
