@@ -8,9 +8,13 @@ module.exports = function(deployTarget) {
             accessKeyId: process.env.AWS_KEY,
             secretAccessKey: process.env.AWS_SECRET,
             region: 'us-east-1',
-            bucket: process.env.S3_BUCKET
+            bucket: process.env.S3_BUCKET,
+            filePattern: function (context, pluginHelper) {
+                let filePattern = pluginHelper.readConfigDefault('filePattern');
+                return filePattern.replace('}', ',json}');
+            },
         },
-
+        
         's3-index': {
             accessKeyId: process.env.AWS_KEY,
             secretAccessKey: process.env.AWS_SECRET,
@@ -32,9 +36,9 @@ module.exports = function(deployTarget) {
     };
 
     if (deployTarget === 'development') {
-      ENV.build.environment = 'development';
-      ENV.build.outputPath = 'dev/';
-      // configure other plugins for development deploy target here
+        ENV.build.environment = 'development';
+        ENV.build.outputPath = 'dev/';
+        // configure other plugins for development deploy target here
     }
 
     if (deployTarget === 'production') {

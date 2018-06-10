@@ -6,7 +6,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
     let app = new EmberApp(defaults, {
         fingerprint: {
-            generateAssetMap: true
+            enabled: true,
+            generateAssetMap: true,
+            fingerprintAssetMap: true,
         }
     });
 
@@ -23,6 +25,7 @@ module.exports = function(defaults) {
     // please specify an object with the list of modules as keys
     // along with the exports of each module as its value.
     // app.import('vendor/scrollreveal.min.js');
+    app.import('vendor/particle-ground.min.js');
 
     return app.toTree();
 };

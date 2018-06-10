@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bridget Sandoval Design&copy;</title>
+    <title>Bridget Sandoval Design &copy;</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,5 +21,52 @@
     <script src="{{rootURL}}assets/site.js"></script>
 
     {{content-for "body-footer"}}
+
+    <div class="app-loading">
+        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-foreground" class="vertical-centered-box"></div>
+
+        <div class="vertical-centered-box">
+            <div class="content">
+                <div class="loader-circle"></div>
+                <div class="loader-line-mask">
+                    <div class="loader-line"></div>
+                </div>
+                <img src="/images/app-logo.png" alt="Bridget Sandoval" class="loading-logo" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            particleground(document.getElementById('particles-foreground'), {
+                dotColor: 'rgba(255, 255, 255, 1)',
+                lineColor: 'rgba(255, 255, 255, 0.05)',
+                minSpeedX: 0.3,
+                maxSpeedX: 0.6,
+                minSpeedY: 0.3,
+                maxSpeedY: 0.6,
+                density: 50000, // One particle every n pixels
+                curvedLines: false,
+                proximity: 250, // How close two dots need to be before they join
+                parallaxMultiplier: 10, // Lower the number is more extreme parallax
+                particleRadius: 4, // Dot size
+            });
+
+            particleground(document.getElementById('particles-background'), {
+                dotColor: 'rgba(255, 255, 255, 0.5)',
+                lineColor: 'rgba(255, 255, 255, 0.05)',
+                minSpeedX: 0.075,
+                maxSpeedX: 0.15,
+                minSpeedY: 0.075,
+                maxSpeedY: 0.15,
+                density: 30000, // One particle every n pixels
+                curvedLines: false,
+                proximity: 20, // How close two dots need to be before they join
+                parallaxMultiplier: 20, // Lower the number is more extreme parallax
+                particleRadius: 2, // Dot size
+            });
+        });
+    </script>
   </body>
 </html>
