@@ -1,0 +1,16 @@
+
+{{#each portfolioData as |section|}}
+    <div class="portfolio-section" style="background-image: url({{section.backgroundImage}})">
+        <div class="portfolio-summary">
+            <div class="portfolio-summary-title">{{section.title}}</div>
+            <div class="portfolio-summary-desc">{{section.desc}}</div>
+        </div>
+        {{#if section.projectImages}}
+            <div class="project-images">
+                {{#photo-swipe items=section.projectImages as |img|}}
+                    <img src={{img.src}} alt={{img.title}} class="{{project-image-proportion img}}">
+                {{/photo-swipe}}
+            </div>
+        {{/if}}
+    </div>
+{{/each}}

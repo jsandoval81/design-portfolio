@@ -1,16 +1,60 @@
 
-section.work-entries {
-    position: relative;
-    margin: 40px;
+.portfolio-list {
 
-    ul.work-entries-list {
+    .portfolio-section {
         display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-        li {
-            margin: 0 20px 20px 0;
+        .portfolio-summary-title {
+            margin-bottom: 24px;
+            font-size: 48px;
+            line-height: 48px;;
+            font-weight: @fontWeightLight;
+            color: @primaryColor;
+            text-align: center;
         }
+
+        .portfolio-summary-desc {
+            color: @white;
+            text-align: center;
+        }
+
+        .project-images {
+
+            & > div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+
+                a {
+                    display: inline-block;
+                    margin: 0 0 16px 16px;
+                    overflow: hidden;
+
+                    img {
+                        display: inline-block;
+                        cursor: pointer;
+
+                        &.wide {
+                            width: auto;
+                            height: 100px;
+                        }
+
+                        &.tall {
+                            width: 100px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import Component from '@ember/component';
 
 export default Component.extend({
@@ -13,7 +14,7 @@ export default Component.extend({
         this._super.apply(arguments);
 
         Ember.$(document).on('click', function (event) {
-            var $target = $(event.target);
+            var $target = Ember.$(event.target);
 
             if ($target.hasClass('mobile-menu-icon')) {
                 $mobileMenu.slideToggle(animationDuration);
