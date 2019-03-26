@@ -1,27 +1,35 @@
 
 .portfolio-list {
+    background-image: url(/images/background-general-light.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 
     .portfolio-section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        min-height: 60vh;
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
+        background-color: transparent;
+        padding: 25px 0;
 
         .portfolio-summary-title {
             margin-bottom: 24px;
             font-size: 48px;
-            line-height: 48px;;
+            line-height: 48px;
             font-weight: @fontWeightLight;
+            font-family: @fontFamilySpecial;
             color: @primaryColor;
+            transform: scale(1,.9);
+            -webkit-transform: scale(1,.9);
             text-align: center;
         }
 
         .portfolio-summary-desc {
-            color: @white;
+            color: @darkPurple;
             text-align: center;
         }
 
@@ -35,8 +43,10 @@
 
                 a {
                     display: inline-block;
-                    margin: 0 0 16px 16px;
+                    margin: 9px;
                     overflow: hidden;
+                    filter: drop-shadow(-3px 3px 5px #767676);
+                    -webkit-filter: drop-shadow(-3px 3px 5px #767676);
 
                     img {
                         display: inline-block;
@@ -44,16 +54,20 @@
 
                         &.wide {
                             width: auto;
-                            height: 100px;
+                            height: 250px;
                         }
 
                         &.tall {
-                            width: 100px;
+                            width: 250px;
                             height: auto;
                         }
                     }
                 }
             }
+        }
+
+        .pswp__bg {
+            background-color: @darkPurple;
         }
 
     }

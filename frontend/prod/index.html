@@ -3,24 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bridget Sandoval Design&copy;</title>
+    <title>Bridget Sandoval Design &copy;</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-<meta name="site/config/environment" content="%7B%22modulePrefix%22%3A%22site%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22site%22%2C%22version%22%3A%220.0.0+dad2d635%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<meta name="site/config/environment" content="%7B%22modulePrefix%22%3A%22site%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22site%22%2C%22version%22%3A%220.0.0+1bf2c602%22%7D%2C%22ifa%22%3A%7B%22enabled%22%3Atrue%2C%22inline%22%3Afalse%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link integrity="" rel="stylesheet" href="/assets/vendor-f8efd91c910c14796f294689c807fda9.css">
-    <link integrity="" rel="stylesheet" href="/assets/site-7ae70a9faed1bca0559e7cc06d0ed12c.css">
+    <link integrity="" rel="stylesheet" href="/assets/site-1e41f365d566b6edc86c254060c5ea18.css">
+
 
     
   </head>
   <body>
     
 
-    <script src="/assets/vendor-e00e6cbae860711fed809fe483fd230d.js" integrity="sha256-iV4d/MsH5lWB7aqr8zMP2O2ocKk+YAijb3aLgMO5lNE= sha512-lcdfmjoFlSTnZraKCq0RCXIYdMWB4X6jjuPZhD/UW0Q9YpCU8Bb3BECVhi8bA/npO6/qreH7VuszhzecY2YVIQ==" ></script>
-    <script src="/assets/site-5aed6a58c9a7a2be7dff0d3e372b7feb.js" integrity="sha256-R8S/oiZaoobTLeXY73gFMh6rK5oE9Lmat/rf+4KyP08= sha512-Navq3U8aVHBSCuDfHFCmZ7I1RjZEvKTnoWJvvrSPZlWF7JrtGmjbQjY1gzo6Ue4btEfQTs82KGapomnoWv9Bqg==" ></script>
+    <script integrity="" src="/assets/vendor-75a0d738e5d27de5d38125dcd5db55e7.js"></script>
+    <script integrity="" src="/assets/site-c5e9126f3f7560719ec60c961c07a345.js"></script>
 
     
+
+    <div class="app-loading">
+        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-foreground" class="vertical-centered-box"></div>
+
+        <div class="vertical-centered-box">
+            <div class="content">
+                <div class="loader-circle"></div>
+                <div class="loader-line-mask">
+                    <div class="loader-line"></div>
+                </div>
+                <img src="/images/app-logo-e995f37da99b1db1b1d4fc144a41e2d3.png" alt="Bridget Sandoval" class="loading-logo" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var loadingUi = {};
+        document.addEventListener('DOMContentLoaded', function(event) {
+            loadingUi.foreground = particleground(document.getElementById('particles-foreground'), {
+                dotColor: 'rgba(255, 255, 255, 1)',
+                lineColor: 'rgba(255, 255, 255, 0.05)',
+                minSpeedX: 0.3,
+                maxSpeedX: 0.6,
+                minSpeedY: 0.3,
+                maxSpeedY: 0.6,
+                density: 50000, // One particle every n pixels
+                curvedLines: false,
+                proximity: 250, // How close two dots need to be before they join
+                parallaxMultiplier: 10, // Lower the number is more extreme parallax
+                particleRadius: 4, // Dot size
+            });
+
+            loadingUi.background = particleground(document.getElementById('particles-background'), {
+                dotColor: 'rgba(255, 255, 255, 0.5)',
+                lineColor: 'rgba(255, 255, 255, 0.05)',
+                minSpeedX: 0.075,
+                maxSpeedX: 0.15,
+                minSpeedY: 0.075,
+                maxSpeedY: 0.15,
+                density: 30000, // One particle every n pixels
+                curvedLines: false,
+                proximity: 20, // How close two dots need to be before they join
+                parallaxMultiplier: 20, // Lower the number is more extreme parallax
+                particleRadius: 2, // Dot size
+            });
+        });
+    </script>
   </body>
 </html>

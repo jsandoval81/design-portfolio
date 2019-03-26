@@ -9,16 +9,73 @@ export default Component.extend({
 
     portfolioData: [
         {
-            title: 'Digital & Print',
-            desc: 'A description of this portfolio section',
-            backgroundImage: '/images/digital_print_background.jpg',
+            title: 'GMB',
+            desc: 'Award-Winning, UI, UX, Wireframing, Prototyping, Graphic Design',
+            backgroundImage: '',
+            projectImages: [
+                {
+                    title: 'An award winning UI for business banking applications.',
+                    src: '/images/gmb_awards.jpg',
+                    w: 1920,
+                    h: 1440,
+                },
+                {
+                    title: 'An award winning UI for business banking applications.',
+                    src: '/images/gmb_tablet_screens.jpg',
+                    w: 1920,
+                    h: 1440,
+                },
+                {
+                    title: 'An award winning UI for business banking applications.',
+                    src: '/images/gmb_process_examples.jpg',
+                    w: 1920,
+                    h: 1440,
+                },
+            ]
+        },
+        {
+            title: 'Vault',
+            desc: 'UI, UX, Wireframing, Prototyping, Graphic Design',
+            backgroundImage: '',
+            projectImages: [
+                {
+                    title: 'Vault was created as a template for Financial Institutions to use as an application for new products.',
+                    src: '/images/vault_device_group.jpg',
+                    w: 1920,
+                    h: 1440,
+                },
+                {
+                    title: 'The Vault template uses best practices in UI/UX design coupled with user research for banking applications.',
+                    src: '/images/vault_mobile_screens.jpg',
+                    w: 1920,
+                    h: 1440,
+                },
+                {
+                    title: 'Credit Cards designed as assets for the Vault design.',
+                    src: '/images/vault_creditcards.jpg',
+                    w: 1920,
+                    h: 1440,
+                },
+            ]
+        },
+        {
+            title: 'Ecology Class Brochure',
+            desc: 'Branding, Print, Graphic Design, Photo Editing',
+            backgroundImage: '',
             projectImages: [
                 {
                     title: 'Brochure of Classes',
                     src: '/images/class_brochure.jpg',
                     w: 1920,
                     h: 1280,
-                },
+                }
+            ]
+        },
+        {
+            title: 'White Paper',
+            desc: 'Print & Digital, Graphic Design, Typography, Photo Editing',
+            backgroundImage: '',
+            projectImages: [
                 {
                     title: 'Magazine style layout created for a corporate White Paper',
                     src: '/images/tes-whitepaper-cover.jpg',
@@ -42,7 +99,14 @@ export default Component.extend({
                     src: '/images/tes-whitepaper-5-6.jpg',
                     w: 1920,
                     h: 1440,
-                },
+                }
+            ]
+        },
+        {
+            title: 'Product Brochure',
+            desc: 'Print & Digital, Typography, Graphic Design, Photo Editing',
+            backgroundImage: '',
+            projectImages: [
                 {
                     title: 'Oversized layout created to showcase software products',
                     src: '/images/product_brochure_cover.jpg',
@@ -61,6 +125,13 @@ export default Component.extend({
                     w: 1920,
                     h: 1229,
                 },
+            ]
+        },
+        {
+            title: 'Corporate Annual Report',
+            desc: 'Print & Digital, Graphic Design, Typography, Photo Editing',
+            backgroundImage: '',
+            projectImages: [
                 {
                     title: 'Annual Company Report',
                     src: '/images/report_cover.jpg',
@@ -91,99 +162,6 @@ export default Component.extend({
                     w: 1920,
                     h: 1440,
                 },
-            ]
-        },
-        {
-            title: 'UI/UX',
-            desc: 'A description of this portfolio section',
-            backgroundImage: '',
-            projectImages: [
-                {
-                    title: 'An award winning UI for business banking applications.',
-                    src: '/images/gmb_awards.jpg',
-                    w: 1920,
-                    h: 1440,
-                },
-                {
-                    title: 'An award winning UI for business banking applications.',
-                    src: '/images/gmb_tablet_screens.jpg',
-                    w: 1920,
-                    h: 1440,
-                },
-                {
-                    title: 'An award winning UI for business banking applications.',
-                    src: '/images/gmb_process_examples.jpg',
-                    w: 1920,
-                    h: 1440,
-                },
-                {
-                    title: 'Vault was created as a template for Financial Institutions to use as an application for new products.',
-                    src: '/images/vault_device_group.jpg',
-                    w: 1920,
-                    h: 1440,
-                },
-                {
-                    title: 'The Vault template uses best practices in UI/UX design coupled with user research for banking applications.',
-                    src: '/images/vault_mobile_screens.jpg',
-                    w: 1920,
-                    h: 1440,
-                },
-                {
-                    title: 'Credit Cards designed as assets for the Vault design.',
-                    src: '/images/vault_creditcards.jpg',
-                    w: 1920,
-                    h: 1440,
-                },
-            ]
-        },
-        {
-            title: 'Web',
-            desc: '',
-            backgroundImage: '',
-            projectImages: [
-                {
-                    title: 'A short description of image 1',
-                    src: '/images/portfolio-img-1.jpg',
-                    w: 4023,
-                    h: 2268,
-                },
-                {
-                    title: 'A short description of image 2',
-                    src: '/images/portfolio-img-2.jpg',
-                    w: 2560,
-                    h: 1440,
-                },
-                {
-                    title: 'A short description of image 3',
-                    src: '/images/portfolio-img-3.jpg',
-                    w: 2560,
-                    h: 1440,
-                }
-            ]
-        },
-        {
-            title: 'Brand',
-            desc: 'A description of this portfolio section',
-            backgroundImage: '',
-            projectImages: [
-                {
-                    title: 'A short description of image 1',
-                    src: '/images/portfolio-img-1.jpg',
-                    w: 4023,
-                    h: 2268,
-                },
-                {
-                    title: 'A short description of image 2',
-                    src: '/images/portfolio-img-2.jpg',
-                    w: 2560,
-                    h: 1440,
-                },
-                {
-                    title: 'A short description of image 3',
-                    src: '/images/portfolio-img-3.jpg',
-                    w: 2560,
-                    h: 1440,
-                }
             ]
         }
 

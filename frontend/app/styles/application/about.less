@@ -14,7 +14,23 @@ section.about {
             z-index: 200;
 
             & * {
-                color: @midGrey;
+                color: @darkPurple;
+            }
+
+            & h1{
+                font-family: @fontFamilySpecial;
+                color: @primaryColor;
+                transform: scale(1,.9);
+                -webkit-transform: scale(1,.9);
+                text-transform: capitalize;
+            }
+
+            & p {
+                font-size: @h3FontSize;
+            }
+
+            & .bold{
+                font-weight: @fontWeight;
             }
         }
 
@@ -35,7 +51,7 @@ section.about {
         height: 100%;
         top: 0px;
         left: 0px;
-        background-image: url(/images/about-bg.png);
+        background-image: url(/images/about-bg.jpg);
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: none;

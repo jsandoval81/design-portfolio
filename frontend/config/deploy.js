@@ -14,23 +14,24 @@ module.exports = function(deployTarget) {
                 return filePattern.replace('}', ',json}');
             },
         },
-        
+
         's3-index': {
             accessKeyId: process.env.AWS_KEY,
             secretAccessKey: process.env.AWS_SECRET,
             region: 'us-east-1',
-            bucket: process.env.S3_BUCKET
+            bucket: process.env.S3_BUCKET,
+            allowOverwrite: true,
         },
 
         'revision-data': {
-            type: 'git-commit'
+            type: 'git-commit',
         },
 
         cloudfront: {
             accessKeyId: process.env.AWS_KEY,
             secretAccessKey: process.env.AWS_SECRET,
             distribution: process.env.CLOUDFRONT_DISTRIBUTION,
-            objectPaths: ['/*']
+            objectPaths: ['/*'],
         },
 
     };
