@@ -9,6 +9,32 @@ export default Component.extend({
 
     portfolioData: [
         {
+            title: 'MyMedTimes',
+            desc: 'Mobile App, UI, UX, Wireframing, Prototyping, Graphic Design',
+            backgroundImage: '',
+            projectImages: [
+                {
+                    title: 'Mobile App, UI, UX, Wireframing, Prototyping, Graphic Design',
+                    src: '/images/mymedtimes-showcase.jpg',
+                    w: 1920,
+                    h: 1200,
+                },
+            ]
+        },
+        {
+            title: 'CentralFill',
+            desc: 'Web App, UI, UX, Wireframing, Prototyping, Graphic Design',
+            backgroundImage: '',
+            projectImages: [
+                {
+                    title: 'Web App, UI, UX, Wireframing, Prototyping, Graphic Design',
+                    src: '/images/centralfill-showcase.jpg',
+                    w: 1920,
+                    h: 1200,
+                },
+            ]
+        },
+        {
             title: 'GMB',
             desc: 'Award-Winning, UI, UX, Wireframing, Prototyping, Graphic Design',
             backgroundImage: '',
