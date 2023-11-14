@@ -8,15 +8,18 @@ A short introduction of this app could easily go here.
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+    * _If MacOS, also requires XCode command line tools via XCode app install_
+* [Node.js](https://nodejs.org/) `8.4.0` (with NPM)
+* Bower
+* Python2 (suggest pyenv)
+* [Ember CLI](https://ember-cli.com/) `2.x`
 
 ## Installation
 
 * `git clone <repository-url>` this repository
 * `cd frontend`
 * `npm install`
+* `bower install`
 
 ## Running / Development
 
@@ -39,6 +42,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build --environment production` (production)
 
 ### Deploying
+Ensure you have the following files populated:
+- `.env.deploy.development`
+- `.env.deploy.production`
 
 **Development**
 `ember deploy development --activate=true`
